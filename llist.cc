@@ -58,7 +58,8 @@ void LList::add_item(int item) {
             cursor = cursor -> next();
             i++;
         }
-        cursor -> previous() -> set_next(new node(item, cursor -> next(), cursor -> previous()));
+        cursor -> previous() -> set_next(new node(item, cursor -> previous(), cursor));
+        cursor -> set_previous(cursor -> previous() -> next());
         nodecount++;
     }
     else {
