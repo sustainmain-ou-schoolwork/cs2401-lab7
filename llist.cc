@@ -8,6 +8,7 @@ treats all numbers divisible by five differently than other numbers.
     John Dolan    Ohio University    Spring 2018
 ************************************************************************/
 #include <iostream>
+#include <iomanip>
 #include "llist.h"
 using namespace std;
 
@@ -36,14 +37,20 @@ LList::~LList() {
 void LList::frontview() const {
     node *cursor = head;
     while (cursor != NULL) {
-        cout << cursor -> data() << "  ";
+        cout << left << setw(5) << cursor -> data();
         cursor = cursor -> next();
     }
-    cout << endl;
+    cout << flush;
 }
 
 // The student is required to write the implementation of this function
 void LList::rearview() const {
+    node *cursor = tail;
+    while (cursor != NULL) {
+        cout << left << setw(5) << cursor -> data();
+        cursor = cursor -> previous();
+    }
+    cout << flush;
 }
 
 void LList::add_item(int item) {
