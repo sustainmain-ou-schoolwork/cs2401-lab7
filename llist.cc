@@ -34,6 +34,25 @@ LList::~LList() {
     }
 }
 
+LList::LList(const LList& other) {
+    nodecount = other.nodecount;
+    if (other.head == NULL) {
+        head = tail = NULL;
+        return;
+    }
+
+    head = tail = new node(other.head -> data());
+
+    node* cursor = other.head;
+    while (cursor -> next() != NULL) {
+        tail -> set_next(new node(cursor -> next() -> data(), tail));
+
+        tail = tail -> next();
+        cursor = cursor -> next();
+    }
+}
+
+
 void LList::frontview() const {
     node *cursor = head;
     while (cursor != NULL) {

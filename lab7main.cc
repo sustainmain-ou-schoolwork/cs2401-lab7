@@ -24,28 +24,28 @@ int main(){
 	    somenums.add_item(n);
     }
 
-// Once you have written the rear-view this should let you
-// see the list frontwards and backwards.
+    // Once you have written the rear-view this should let you
+    // see the list frontwards and backwards.
     cout << "Front View:\n";
     somenums.frontview();
     cout << "\nRear View:\n";
     somenums.rearview();
 
-// This part will be uncommented once you have written the copy constructor
-/*
-{
-    LList numcopy(somenums);  // call to the copy constructor
-    cout << "Copied List Front View:\n";
-    numcopy.frontview();
-    cout << "\nCopied List Rear View:\n";
-    numcopy.rearview();
-}   // Line 42 - What happens here?
+    // This part will be uncommented once you have written the copy constructor
+    /*
+    {
+        LList numcopy(somenums);  // call to the copy constructor
+        cout << "Copied List Front View:\n";
+        numcopy.frontview();
+        cout << "\nCopied List Rear View:\n";
+        numcopy.rearview();
+    }   // Line 42 - What happens here?
 
-// Checking the original list
-    cout << "Original List Front View:\n";
-    somenums.frontview();
-    cout << "\nOriginal List Rear View:\n";
-    somenums.rearview();
-*/
-return 0;
+    // Checking the original list
+        cout << "Original List Front View:\n";
+        somenums.frontview();
+        cout << "\nOriginal List Rear View:\n";
+        somenums.rearview();
+    */
+    return 0;
 }
