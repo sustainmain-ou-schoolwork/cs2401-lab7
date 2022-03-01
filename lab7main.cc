@@ -5,8 +5,7 @@ backwards. Also, there are problems in the code which you will need to
 diagnose using gdb.
 Finally you will also need to write and test the copy constructor for 
 this class.
-	John Dolan	School of EECS Ohio University, Athens Ohio
-			Spring 2018
+    John Dolan	School of EECS Ohio University, Athens Ohio  Spring 2018
     Patricia Lindner    October 2021
 *************************************************************************/
 
