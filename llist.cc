@@ -35,20 +35,25 @@ LList::~LList() {
 }
 
 LList::LList(const LList& other) {
+    // remember, using the add_item function won't work correctly because of the special case for items divisible by 5
+
     nodecount = other.nodecount;
+
     if (other.head == NULL) {
         head = tail = NULL;
         return;
     }
 
-    head = tail = new node(other.head -> data());
-
+    // copy first node
     node* cursor = other.head;
+    head = tail = new node(cursor -> data());
+
+    // copy the rest of the nodes
     while (cursor -> next() != NULL) {
-        tail -> set_next(new node(cursor -> next() -> data(), tail));
+        cursor = cursor -> next();
+        tail -> set_next(new node(cursor -> data(), tail));
 
         tail = tail -> next();
-        cursor = cursor -> next();
     }
 }
 

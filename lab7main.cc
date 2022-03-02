@@ -30,22 +30,23 @@ int main(){
     somenums.frontview();
     cout << "\nRear View:\n";
     somenums.rearview();
+    cout << endl;
 
-    // This part will be uncommented once you have written the copy constructor
-    /*
-    {
-        LList numcopy(somenums);  // call to the copy constructor
-        cout << "Copied List Front View:\n";
-        numcopy.frontview();
-        cout << "\nCopied List Rear View:\n";
-        numcopy.rearview();
-    }   // Line 42 - What happens here?
+
+
+    LList numcopy(somenums);  // call to the copy constructor
+    cout << "Copied List Front View:\n";
+    numcopy.frontview();
+    cout << "\nCopied List Rear View:\n";
+    numcopy.rearview();
+    cout << endl;
 
     // Checking the original list
-        cout << "Original List Front View:\n";
-        somenums.frontview();
-        cout << "\nOriginal List Rear View:\n";
-        somenums.rearview();
-    */
+    cout << "Original List Front View:\n";
+    somenums.frontview();
+    cout << "\nOriginal List Rear View:\n";
+    somenums.rearview();
+    cout << endl;
+    
     return 0;
 }
